@@ -11,18 +11,41 @@
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/btn_logout">
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="fill_parent"
             android:layout_height="130dp"
-android:scaleType="centerCrop"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/img_analyze1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:paddingLeft="20dp"
+            android:paddingBottom="15dp"
+            android:shadowColor="@color/black"
+            android:text="Analyze your skin"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
