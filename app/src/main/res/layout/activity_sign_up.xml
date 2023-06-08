@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/layered_waves_background"
+    android:background="@drawable/layered_waves"
     tools:context=".ui.SignUpActivity">
 
     <TextView
@@ -128,7 +128,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="3dp"
-        android:backgroundTint="#FA7268"
+        android:backgroundTint="@color/pink"
         android:text="@string/signup"
         app:layout_constraintBottom_toTopOf="@+id/tvlog"
         app:layout_constraintEnd_toEndOf="parent"
@@ -167,7 +167,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:text="@string/login_here"
-        android:textColor="#C62368"
+        android:textColor="#FF899D"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvlog"
         app:layout_constraintStart_toEndOf="@+id/tvlog"
