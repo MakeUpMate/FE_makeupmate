@@ -1,4 +1,4 @@
-package com.example.makeupmate
+package com.example.makeupmate.ui
 
 import android.Manifest
 import android.content.Intent
@@ -16,6 +16,8 @@ import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.makeupmate.R
+import com.example.makeupmate.utils.createFile
 import com.example.makeupmate.databinding.ActivityCameraBinding
 
 class CameraActivity : AppCompatActivity() {

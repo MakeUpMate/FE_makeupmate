@@ -1,12 +1,12 @@
-package com.example.makeupmate
+package com.example.makeupmate.ui
 
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.camera.core.CameraSelector
 import com.example.makeupmate.databinding.ActivityPreviewBinding
+import com.example.makeupmate.utils.rotateFile
 import java.io.File
 
 class PreviewActivity : AppCompatActivity() {

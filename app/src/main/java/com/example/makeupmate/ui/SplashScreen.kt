@@ -1,10 +1,11 @@
-package com.example.makeupmate
+package com.example.makeupmate.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.example.makeupmate.R
 import com.google.firebase.auth.FirebaseAuth
 
 class SplashScreen : AppCompatActivity() {
@@ -30,7 +31,7 @@ class SplashScreen : AppCompatActivity() {
             }, 3000)
         } else{
             Handler(Looper.getMainLooper()).postDelayed({
-                val intent = Intent(this@SplashScreen, SignUpActivity::class.java)
+                val intent = Intent(this@SplashScreen, WelcomeActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(intent)
             }, 3000)
