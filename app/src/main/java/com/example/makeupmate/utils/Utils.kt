@@ -1,4 +1,4 @@
-package com.example.makeupmate
+package com.example.makeupmate.utils
 
 import android.app.Application
 import android.content.ContentResolver
@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory
 import android.graphics.Matrix
 import android.net.Uri
 import android.os.Environment
+import com.example.makeupmate.R
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -80,4 +81,14 @@ fun reduceFileImage(file: File): File {
     bitmap.compress(Bitmap.CompressFormat.JPEG, compressQuality, FileOutputStream(file))
 
     return file
+}
+
+fun imageFileToBase64(file: File): String {
+    return try {
+        val fileBytes = file.readBytes()
+        Base64.getEncoder().encodeToString(fileBytes)
+    } catch (e: Exception) {
+        e.printStackTrace()
+        ""
+    }
 }

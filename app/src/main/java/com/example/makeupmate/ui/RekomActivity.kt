@@ -1,11 +1,10 @@
-package com.example.makeupmate
+package com.example.makeupmate.ui
 
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.makeupmate.databinding.ActivityPreviewBinding
 import com.example.makeupmate.databinding.ActivityRekomBinding
 import java.io.File
 

@@ -60,4 +60,9 @@
     <string name="email_notempty">Email must not be empty</string>
     <string name="pass__notempty">Password must not be empty</string>
     <string name="conpass__notempty">Confirm Password must not be empty</string>
+    <string name="login_arrow">login arrow</string>
+    <string name="signup_arrow">signup arrow</string>
+    <string name="login_text_desc">Login to MakeUpMate</string>
+    <string name="create_new_account">Create new Account</string>
+    <string name="slogan">Elevate Your Beauty Game with AI-Powered Perfection</string>
 </resources>
