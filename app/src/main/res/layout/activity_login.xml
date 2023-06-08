@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/layered_waves_background"
+    android:background="@drawable/background_page"
     tools:context=".ui.LoginActivity">
 
     <TextView
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
         android:layout_marginBottom="32dp"
         android:text="@string/title_login_page"
         android:textColor="@color/black"
@@ -21,7 +22,7 @@
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/emailTextView"
@@ -100,7 +101,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="3dp"
         android:text="@string/login"
-        android:backgroundTint="#FA7268"
+        android:backgroundTint="@color/pink"
         app:layout_constraintBottom_toTopOf="@+id/tvsgn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -139,7 +140,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:text="@string/signup_here"
-        android:textColor="#C62368"
+        android:textColor="#FF899D"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvsgn"
         app:layout_constraintStart_toEndOf="@+id/tvsgn"

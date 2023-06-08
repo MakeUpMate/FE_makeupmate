@@ -17,8 +17,6 @@ class SplashScreen : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         firebaseAuth = FirebaseAuth.getInstance()
-
-
     }
 
     override fun onStart() {

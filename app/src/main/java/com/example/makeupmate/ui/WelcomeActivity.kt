@@ -13,11 +13,11 @@ class WelcomeActivity : AppCompatActivity() {
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.loginArrow.setOnClickListener{
+        binding.llLogin.setOnClickListener{
             startActivity(Intent(this@WelcomeActivity, LoginActivity::class.java))
         }
 
-        binding.signupArrow.setOnClickListener {
+        binding.llCreate.setOnClickListener {
             startActivity(Intent(this@WelcomeActivity, SignUpActivity::class.java))
         }
     }

@@ -73,4 +73,6 @@
     <color name="md_theme_dark_surfaceTint">#FFB870</color>
     <color name="md_theme_dark_outlineVariant">#51453A</color>
     <color name="md_theme_dark_scrim">#000000</color>
+
+    <color name="pink">#FF6983</color>
 </resources>
