@@ -10,6 +10,8 @@ import kotlinx.coroutines.flow.map
 
 class TokenPreference private constructor(private val dataStore: DataStore<Preferences>) {
 
+    private val TOKEN = stringPreferencesKey("token")
+
     fun getToken(): Flow<String> {
         return dataStore.data.map { preferences ->
             preferences[TOKEN] ?: ""
@@ -31,8 +33,6 @@ class TokenPreference private constructor(private val dataStore: DataStore<Prefe
     companion object {
         @Volatile
         private var INSTANCE: TokenPreference? = null
-
-        private val TOKEN = stringPreferencesKey("token")
 
         fun getInstance(dataStore: DataStore<Preferences>): TokenPreference {
             return INSTANCE ?: synchronized(this) {
