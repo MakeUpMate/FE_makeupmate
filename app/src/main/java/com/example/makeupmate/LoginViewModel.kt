@@ -20,16 +20,6 @@ class LoginViewModel(private val pref: TokenPreference) : ViewModel()  {
     private val _loginResponse = MutableLiveData<Boolean?>()
     val loginResponse: LiveData<Boolean?> = _loginResponse
 
-    fun getToken(): LiveData<String> {
-        return pref.getToken().asLiveData()
-    }
-
-    fun saveToken(token: String) {
-        viewModelScope.launch {
-            pref.saveToken(token)
-        }
-    }
-
     fun loginAcc(context: Context, email: String, password: String){
         var firebaseAuth = FirebaseAuth.getInstance()
         firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {

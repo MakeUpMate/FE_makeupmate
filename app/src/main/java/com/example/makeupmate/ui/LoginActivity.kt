@@ -62,9 +62,6 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
-            viewModel.getToken().observe(this) {
-                Log.d("token pref :", it)
-            }
         }
     }
 }
