@@ -3,6 +3,7 @@ package com.example.makeupmate.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.makeupmate.ui.LoginActivity
 import com.example.makeupmate.databinding.ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity() {
