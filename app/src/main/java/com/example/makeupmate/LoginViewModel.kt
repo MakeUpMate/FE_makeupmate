@@ -25,7 +25,7 @@ class LoginViewModel(private val pref: TokenPreference) : ViewModel()  {
         firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
             if (it.isSuccessful) {
                 _loginResponse.value = true
-                firebaseAuth.currentUser?.getIdToken(false)?.addOnSuccessListener {
+                firebaseAuth.currentUser?.getIdToken(true)?.addOnSuccessListener {
                     viewModelScope.launch {
                         pref.saveToken(it.token.toString())
                     }
