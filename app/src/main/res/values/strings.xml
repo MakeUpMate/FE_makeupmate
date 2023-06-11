@@ -65,4 +65,6 @@
     <string name="login_text_desc">Login to MakeUpMate</string>
     <string name="create_new_account">Create new Account</string>
     <string name="slogan">Elevate Your Beauty Game with AI-Powered Perfection</string>
+    <string name="back">button back</string>
+    <string name="camera">Camera</string>
 </resources>
