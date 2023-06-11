@@ -19,6 +19,12 @@ class MainViewModel(private val pref: TokenPreference) : ViewModel() {
         }
     }
 
+    fun logout() {
+        viewModelScope.launch {
+            pref.logout()
+        }
+    }
+
     fun tokenRefresh() {
         var firebaseAuth = FirebaseAuth.getInstance()
         firebaseAuth.currentUser?.getIdToken(true)?.addOnSuccessListener {
