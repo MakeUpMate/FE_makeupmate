@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -36,6 +37,10 @@ class RekomActivity : AppCompatActivity() {
             ViewModelFactory(TokenPreference.getInstance(dataStore))
         )[RekomViewModel::class.java]
 
+        viewModel.isLoading.observe(this) {
+            showLoading(it)
+        }
+
         val myFile = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             intent.getSerializableExtra("picture", File::class.java)
         } else {
@@ -57,6 +62,10 @@ class RekomActivity : AppCompatActivity() {
             startActivity(Intent(this@RekomActivity, MainActivity::class.java))
         }
 
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     companion object {
