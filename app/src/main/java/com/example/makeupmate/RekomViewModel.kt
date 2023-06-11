@@ -29,11 +29,11 @@ class RekomViewModel(private val pref: TokenPreference) : ViewModel() {
         client.enqueue(object : Callback<PredictResponse> {
             override fun onResponse(call: Call<PredictResponse>, response: Response<PredictResponse>) {
                 if (response.isSuccessful) {
-                    Toast.makeText(context, response.body().toString(), Toast.LENGTH_SHORT).show()
+                    Log.e(TAG, "Success: ${response.body()}")
                 } else {
                     Toast.makeText(context, response.errorBody().toString(), Toast.LENGTH_LONG)
                         .show()
-                    Log.e(TAG, "Eror: ${response.message()}")
+                    Log.e(TAG, "Erorr: ${response.message()}")
                 }
             }
 
