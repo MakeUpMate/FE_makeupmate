@@ -83,9 +83,9 @@ class RekomActivity : AppCompatActivity() {
                 .load(response?.skintone)
                 .into(ivSkintone)
 
-            cvHex1.setBackgroundColor(Color.parseColor(response?.hex1))
-            cvHex2.setBackgroundColor(Color.parseColor(response?.hex2))
-            cvHex3.setBackgroundColor(Color.parseColor(response?.hex3))
+            cvHex1.setCardBackgroundColor(Color.parseColor(response?.hex1))
+            cvHex2.setCardBackgroundColor(Color.parseColor(response?.hex2))
+            cvHex3.setCardBackgroundColor(Color.parseColor(response?.hex3))
 
             Glide.with(this@RekomActivity)
                 .load(response?.bestMatch)

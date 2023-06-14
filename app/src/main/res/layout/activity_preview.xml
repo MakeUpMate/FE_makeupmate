@@ -60,6 +60,7 @@
             android:id="@+id/delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/md_theme_light_outline"
             android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:text="Delete" />
@@ -69,6 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
+            android:backgroundTint="@color/md_theme_light_secondary"
             android:layout_weight="1"
             android:text="Confirm" />
     </LinearLayout>

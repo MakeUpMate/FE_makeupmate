@@ -36,12 +36,11 @@ class RekomViewModel(private val pref: TokenPreference) : ViewModel() {
         val client = ApiConfig.getApiService().postImage(token, image)
         client.enqueue(object : Callback<PredictResponse> {
             override fun onResponse(call: Call<PredictResponse>, response: Response<PredictResponse>) {
+                _isLoading.value = false
                 if (response.isSuccessful) {
-                    _isLoading.value = false
                     _rekomResponse.value = response.body()
                     Log.d(TAG, "Success: ${response.body()}")
                 } else {
-                    _isLoading.value = false
                     Toast.makeText(context, response.errorBody().toString(), Toast.LENGTH_LONG)
                         .show()
                     Log.e(TAG, "Erorr: ${response.message()}")
@@ -49,6 +48,9 @@ class RekomViewModel(private val pref: TokenPreference) : ViewModel() {
             }
 
             override fun onFailure(call: Call<PredictResponse>, t: Throwable) {
+                if(t.message.toString() == "timeout"){
+                    postImage(context, token, image)
+                }
                 _isLoading.value = false
                 Toast.makeText(context, t.message.toString(), Toast.LENGTH_SHORT).show()
                 Log.e(TAG, "onFailure: ${t.message.toString()}")
