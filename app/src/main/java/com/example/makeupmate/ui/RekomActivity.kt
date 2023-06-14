@@ -83,19 +83,19 @@ class RekomActivity : AppCompatActivity() {
                 .load(response?.skintone)
                 .into(ivSkintone)
 
-            ivCircle1.setColorFilter(Color.parseColor(response?.hex1), PorterDuff.Mode.SRC_IN)
-            ivCircle2.setColorFilter(Color.parseColor(response?.hex2), PorterDuff.Mode.SRC_IN)
-            ivCircle3.setColorFilter(Color.parseColor(response?.hex3), PorterDuff.Mode.SRC_IN)
+            cvHex1.setBackgroundColor(Color.parseColor(response?.hex1))
+            cvHex2.setBackgroundColor(Color.parseColor(response?.hex2))
+            cvHex3.setBackgroundColor(Color.parseColor(response?.hex3))
 
             Glide.with(this@RekomActivity)
                 .load(response?.bestMatch)
-                .into(ivProduct1)
+                .into(ivLook1)
             Glide.with(this@RekomActivity)
                 .load(response?.recom2)
-                .into(ivProduct2)
+                .into(ivLook2)
             Glide.with(this@RekomActivity)
                 .load(response?.recom3)
-                .into(ivProduct3)
+                .into(ivLook3)
 
         }
     }

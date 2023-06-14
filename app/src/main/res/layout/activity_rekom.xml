@@ -121,7 +121,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_foundation"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="160dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
@@ -141,42 +141,46 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="32dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
                     android:text="Foundation"
                     android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/iv_circle1"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="85dp"
-                    android:src="@drawable/circle_24"
-                    app:layout_constraintBottom_toBottomOf="@+id/tv_foundation"
-                    app:layout_constraintStart_toEndOf="@+id/tv_foundation"
-                    app:layout_constraintTop_toTopOf="@+id/tv_foundation" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_foundation">
 
-                <ImageView
-                    android:id="@+id/iv_circle2"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="16dp"
-                    android:src="@drawable/circle_24"
-                    app:layout_constraintBottom_toBottomOf="@+id/iv_circle1"
-                    app:layout_constraintStart_toEndOf="@+id/iv_circle1"
-                    app:layout_constraintTop_toTopOf="@+id/iv_circle1" />
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cv_hex1"
+                        style="@style/MyCardView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1" />
 
-                <ImageView
-                    android:id="@+id/iv_circle3"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="16dp"
-                    android:src="@drawable/circle_24"
-                    app:layout_constraintBottom_toBottomOf="@+id/iv_circle2"
-                    app:layout_constraintStart_toEndOf="@+id/iv_circle2"
-                    app:layout_constraintTop_toTopOf="@+id/iv_circle2" />
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cv_hex2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="0dp" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cv_hex3"
+                        style="@style/MyCardView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
@@ -196,7 +200,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
-            android:text="Recommendation Make up"
+            android:text="Recommendation Style"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -205,110 +209,96 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv_product1"
-            android:layout_width="115dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="4dp"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintEnd_toStartOf="@+id/cv_product2"
+            android:id="@+id/cv_look1"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="18dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_recommen_product">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_look1"
+                android:layout_width="fill_parent"
+                android:layout_height="130dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/img_analyze1" />
 
-                <ImageView
-                    android:id="@+id/iv_product1"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginTop="15dp"
-                    tools:srcCompat="@tools:sample/avatars" />
-
-                <TextView
-                    android:id="@+id/tv_product1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Best Match" />
-
-            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingLeft="20dp"
+                android:paddingBottom="15dp"
+                android:shadowColor="@color/black"
+                android:text="Best Match"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv_product2"
-            android:layout_width="115dp"
-            android:layout_height="150dp"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="4dp"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintBottom_toBottomOf="@+id/cv_product1"
-            app:layout_constraintEnd_toStartOf="@+id/cv_product3"
-            app:layout_constraintStart_toEndOf="@+id/cv_product1"
-            app:layout_constraintTop_toTopOf="@+id/cv_product1">
+            android:id="@+id/cv_look2"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_look1">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_look2"
+                android:layout_width="fill_parent"
+                android:layout_height="130dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/img_analyze1" />
 
-                <ImageView
-                    android:id="@+id/iv_product2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginTop="15dp"
-                    tools:srcCompat="@tools:sample/avatars" />
-
-                <TextView
-                    android:id="@+id/tv_product2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Best Match" />
-
-            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingLeft="20dp"
+                android:paddingBottom="15dp"
+                android:shadowColor="@color/black"
+                android:text="Second Recommendation"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv_product3"
-            android:layout_width="115dp"
-            android:layout_height="150dp"
-            android:layout_marginEnd="8dp"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="4dp"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintBottom_toBottomOf="@+id/cv_product2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/cv_product2"
-            app:layout_constraintTop_toTopOf="@+id/cv_product2">
+            android:id="@+id/cv_look3"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_look2">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_look3"
+                android:layout_width="fill_parent"
+                android:layout_height="130dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/img_analyze1" />
 
-                <ImageView
-                    android:id="@+id/iv_product3"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginTop="15dp"
-                    tools:srcCompat="@tools:sample/avatars" />
-
-                <TextView
-                    android:id="@+id/tv_product3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Best Match" />
-
-            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingLeft="20dp"
+                android:paddingBottom="15dp"
+                android:shadowColor="@color/black"
+                android:text="Third Recommendatipm"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
