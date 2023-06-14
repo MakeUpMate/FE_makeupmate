@@ -19,6 +19,7 @@ import com.example.makeupmate.ViewModelFactory
 import com.example.makeupmate.data.Image64
 import com.example.makeupmate.databinding.ActivityRekomBinding
 import com.example.makeupmate.utils.imageFileToBase64
+import com.example.makeupmate.utils.reduceFileImage
 import java.io.File
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
@@ -54,7 +55,7 @@ class RekomActivity : AppCompatActivity() {
 
         if (myFile != null) {
             viewModel.getToken().observe(this){
-                viewModel.postImage(this, it.toString(), Image64(imageFileToBase64(myFile)))
+                viewModel.postImage(this, it.toString(), Image64(imageFileToBase64(reduceFileImage(myFile))))
             }
         }
 

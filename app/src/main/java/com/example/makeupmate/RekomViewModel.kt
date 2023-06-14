@@ -19,7 +19,7 @@ import retrofit2.Response
 
 class RekomViewModel(private val pref: TokenPreference) : ViewModel() {
 
-    private val TAG = "Login"
+    private val TAG = "Rekom"
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
@@ -45,6 +45,7 @@ class RekomViewModel(private val pref: TokenPreference) : ViewModel() {
             }
 
             override fun onFailure(call: Call<PredictResponse>, t: Throwable) {
+                _isLoading.value = false
                 Toast.makeText(context, t.message.toString(), Toast.LENGTH_SHORT).show()
                 Log.e(TAG, "onFailure: ${t.message.toString()}")
             }

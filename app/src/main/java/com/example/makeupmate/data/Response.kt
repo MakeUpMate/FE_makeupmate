@@ -5,13 +5,13 @@ import com.google.gson.annotations.SerializedName
 data class PredictResponse(
 
 	@field:SerializedName("recom2")
-	val recom2: Int? = null,
+	val recom2: String? = null,
 
 	@field:SerializedName("bestMatch")
-	val bestMatch: Int? = null,
+	val bestMatch: String? = null,
 
 	@field:SerializedName("recom3")
-	val recom3: Int? = null,
+	val recom3: String? = null,
 
 	@field:SerializedName("hex1")
 	val hex1: String? = null,
