@@ -24,6 +24,9 @@ class RekomViewModel(private val pref: TokenPreference) : ViewModel() {
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
+    private val _rekomResponse = MutableLiveData<PredictResponse>()
+    val rekomResponse: LiveData<PredictResponse> = _rekomResponse
+
     fun getToken(): LiveData<String> {
         return pref.getToken().asLiveData()
     }
@@ -35,6 +38,7 @@ class RekomViewModel(private val pref: TokenPreference) : ViewModel() {
             override fun onResponse(call: Call<PredictResponse>, response: Response<PredictResponse>) {
                 if (response.isSuccessful) {
                     _isLoading.value = false
+                    _rekomResponse.value = response.body()
                     Log.d(TAG, "Success: ${response.body()}")
                 } else {
                     _isLoading.value = false
