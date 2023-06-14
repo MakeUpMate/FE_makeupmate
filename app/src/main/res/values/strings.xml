@@ -67,4 +67,27 @@
     <string name="slogan">Elevate Your Beauty Game with AI-Powered Perfection</string>
     <string name="back">button back</string>
     <string name="camera">Camera</string>
+    <string name="capture">capture</string>
+    <string name="switch_camera">switch_camera</string>
+    <string name="faceguideline">faceguideline</string>
+    <string name="button_analyze_your_skin">button analyze your skin</string>
+    <string name="analyze_your_skin">Analyze your skin</string>
+    <string name="logout">logout</string>
+    <string name="preview">Preview</string>
+    <string name="back_button">back button</string>
+    <string name="image_preview">image preview</string>
+    <string name="delete">Delete</string>
+    <string name="confirm">Confirm</string>
+    <string name="rekomendation">Rekomendation</string>
+    <string name="line">line</string>
+    <string name="your_skin_tone_is">Your Skin Tone is</string>
+    <string name="there_our_recommendation">There our Recommendation</string>
+    <string name="foundation">Foundation</string>
+    <string name="recommendation_style">Recommendation Style</string>
+    <string name="gambar_rekomen_style">gambar rekomen style</string>
+    <string name="best_match">Best Match</string>
+    <string name="second_recommendation">Second Recommendation</string>
+    <string name="third_recommendatipm">Third Recommendatipm</string>
+    <string name="logo">logo</string>
+    <string name="ilustrasi">ilustrasi</string>
 </resources>

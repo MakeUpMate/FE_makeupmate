@@ -24,16 +24,17 @@
             android:layout_width="fill_parent"
             android:layout_height="130dp"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/img_analyze1" />
+            app:srcCompat="@drawable/img_analyze1"
+            android:contentDescription="@string/button_analyze_your_skin" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
             android:paddingBottom="15dp"
             android:shadowColor="@color/black"
-            android:text="Analyze your skin"
+            android:text="@string/analyze_your_skin"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -47,6 +48,7 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logout" />
+        app:srcCompat="@drawable/logout"
+        android:contentDescription="@string/logout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,7 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_preview_photo"></androidx.camera.view.PreviewView>
+        app:layout_constraintTop_toBottomOf="@+id/tv_preview_photo" />
 
     <ImageView
         android:id="@+id/btn_back"
@@ -37,7 +37,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/capture" />
+        app:srcCompat="@drawable/capture"
+        android:contentDescription="@string/capture" />
 
     <ImageView
         android:id="@+id/switch_camera"
@@ -47,7 +48,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/capture_photo"
         app:layout_constraintTop_toTopOf="@+id/capture_photo"
-        app:srcCompat="@drawable/change_camera" />
+        app:srcCompat="@drawable/change_camera"
+        android:contentDescription="@string/switch_camera" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -58,7 +60,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/face_guideline" />
+        app:srcCompat="@drawable/face_guideline"
+        android:contentDescription="@string/faceguideline" />
 
     <TextView
         android:id="@+id/tv_preview_photo"

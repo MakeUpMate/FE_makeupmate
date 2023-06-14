@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
-        android:text="Preview"
+        android:text="@string/preview"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,8 @@
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_button" />
+        app:srcCompat="@drawable/back_button"
+        android:contentDescription="@string/back_button" />
 
     <ImageView
         android:id="@+id/preview_photo"
@@ -42,7 +43,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_preview_photo"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/image_preview" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -61,18 +63,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/md_theme_light_outline"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:text="Delete" />
+            android:text="@string/delete"
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:id="@+id/confirm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:backgroundTint="@color/md_theme_light_secondary"
             android:layout_weight="1"
-            android:text="Confirm" />
+            android:text="@string/confirm"
+            tools:ignore="ButtonStyle" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

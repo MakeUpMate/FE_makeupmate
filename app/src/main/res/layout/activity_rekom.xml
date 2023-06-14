@@ -9,14 +9,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/tv_preview_photo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:text="Rekomendation"
+            android:text="@string/rekomendation"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,8 @@
             android:layout_marginTop="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/back_button" />
+            app:srcCompat="@drawable/back_button"
+            android:contentDescription="@string/back_button" />
 
         <ImageView
             android:id="@+id/preview_photo"
@@ -44,7 +45,8 @@
             app:layout_constraintHorizontal_bias="0.53"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_preview_photo"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="@string/image_preview" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -56,7 +58,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/preview_photo"
-            app:srcCompat="@drawable/line" />
+            app:srcCompat="@drawable/line"
+            android:contentDescription="@string/line" />
 
         <TextView
             android:id="@+id/tv_skintone"
@@ -64,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="24dp"
-            android:text="Your Skin Tone is"
+            android:text="@string/your_skin_tone_is"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -92,7 +95,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_skintone"
-            app:srcCompat="@drawable/line" />
+            app:srcCompat="@drawable/line"
+            android:contentDescription="@string/line" />
 
         <TextView
             android:id="@+id/tv_recommen"
@@ -100,7 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
-            android:text="There our Recommendation"
+            android:text="@string/there_our_recommendation"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -133,7 +137,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="24dp"
-                    android:text="Foundation"
+                    android:text="@string/foundation"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -185,7 +189,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cv_foundation"
-            app:srcCompat="@drawable/line" />
+            app:srcCompat="@drawable/line"
+            android:contentDescription="@string/line" />
 
         <TextView
             android:id="@+id/tv_recommen_product"
@@ -193,7 +198,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
-            android:text="Recommendation Style"
+            android:text="@string/recommendation_style"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -218,16 +223,17 @@
                 android:layout_width="fill_parent"
                 android:layout_height="130dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/img_analyze1" />
+                app:srcCompat="@drawable/img_analyze1"
+                android:contentDescription="@string/gambar_rekomen_style" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
                 android:paddingBottom="15dp"
                 android:shadowColor="@color/black"
-                android:text="Best Match"
+                android:text="@string/best_match"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -250,16 +256,17 @@
                 android:layout_width="fill_parent"
                 android:layout_height="130dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/img_analyze1" />
+                app:srcCompat="@drawable/img_analyze1"
+                android:contentDescription="@string/gambar_rekomen_style" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
                 android:paddingBottom="15dp"
                 android:shadowColor="@color/black"
-                android:text="Second Recommendation"
+                android:text="@string/second_recommendation"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -282,16 +289,17 @@
                 android:layout_width="fill_parent"
                 android:layout_height="130dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/img_analyze1" />
+                app:srcCompat="@drawable/img_analyze1"
+                android:contentDescription="@string/gambar_rekomen_style" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
                 android:paddingBottom="15dp"
                 android:shadowColor="@color/black"
-                android:text="Third Recommendatipm"
+                android:text="@string/third_recommendatipm"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
