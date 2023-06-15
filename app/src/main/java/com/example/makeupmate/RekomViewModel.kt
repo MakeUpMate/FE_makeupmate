@@ -11,6 +11,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.makeupmate.data.ApiConfig
 import com.example.makeupmate.data.Image64
 import com.example.makeupmate.data.PredictResponse
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
@@ -41,19 +42,24 @@ class RekomViewModel(private val pref: TokenPreference) : ViewModel() {
                     _rekomResponse.value = response.body()
                     Log.d(TAG, "Success: ${response.body()}")
                 } else {
-                    Toast.makeText(context, response.errorBody().toString(), Toast.LENGTH_LONG)
-                        .show()
+//                    Toast.makeText(context, response.errorBody().toString(), Toast.LENGTH_LONG)
+//                        .show()
                     Log.e(TAG, "Erorr: ${response.message()}")
                 }
             }
 
             override fun onFailure(call: Call<PredictResponse>, t: Throwable) {
                 if(t.message.toString() == "timeout"){
-                    postImage(context, token, image)
+                    viewModelScope.launch {
+                        delay(3000) // Delay for 3 seconds
+                        postImage(context, token, image)
+                        Log.e(TAG, "onFailure: ${t.message.toString()}")
+                    }
+                } else {
+                    _isLoading.value = false
+//                Toast.makeText(context, t.message.toString(), Toast.LENGTH_SHORT).show()
+                    Log.e(TAG, "onFailure: ${t.message.toString()}")
                 }
-                _isLoading.value = false
-                Toast.makeText(context, t.message.toString(), Toast.LENGTH_SHORT).show()
-                Log.e(TAG, "onFailure: ${t.message.toString()}")
             }
 
         })

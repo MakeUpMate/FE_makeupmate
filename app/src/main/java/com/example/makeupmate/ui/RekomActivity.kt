@@ -4,12 +4,10 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.graphics.Color
-import android.graphics.PorterDuff
 import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.graphics.toColorInt
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
@@ -96,6 +94,22 @@ class RekomActivity : AppCompatActivity() {
             Glide.with(this@RekomActivity)
                 .load(response?.recom3)
                 .into(ivLook3)
+
+            cvLook1.setOnClickListener {
+                val intent = Intent(this@RekomActivity, DetailActivity::class.java)
+                intent.putExtra("img_url", response?.bestMatch)
+                startActivity(intent)
+            }
+            cvLook2.setOnClickListener {
+                val intent = Intent(this@RekomActivity, DetailActivity::class.java)
+                intent.putExtra("img_url", response?.recom2)
+                startActivity(intent)
+            }
+            cvLook3.setOnClickListener {
+                val intent = Intent(this@RekomActivity, DetailActivity::class.java)
+                intent.putExtra("img_url", response?.recom3)
+                startActivity(intent)
+            }
 
         }
     }

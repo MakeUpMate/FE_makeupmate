@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:text="@string/rekomendation"
+            android:text="@string/recommendation"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -299,7 +299,7 @@
                 android:paddingStart="20dp"
                 android:paddingBottom="15dp"
                 android:shadowColor="@color/black"
-                android:text="@string/third_recommendatipm"
+                android:text="@string/third_recommendation"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />

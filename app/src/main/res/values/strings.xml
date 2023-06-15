@@ -78,7 +78,7 @@
     <string name="image_preview">image preview</string>
     <string name="delete">Delete</string>
     <string name="confirm">Confirm</string>
-    <string name="rekomendation">Rekomendation</string>
+    <string name="recommendation">Recommendation</string>
     <string name="line">line</string>
     <string name="your_skin_tone_is">Your Skin Tone is</string>
     <string name="there_our_recommendation">There our Recommendation</string>
@@ -87,7 +87,13 @@
     <string name="gambar_rekomen_style">gambar rekomen style</string>
     <string name="best_match">Best Match</string>
     <string name="second_recommendation">Second Recommendation</string>
-    <string name="third_recommendatipm">Third Recommendatipm</string>
+    <string name="third_recommendation">Third Recommendation</string>
     <string name="logo">logo</string>
     <string name="ilustrasi">ilustrasi</string>
+    <string name="make_up_style">Make Up Style</string>
+    <string name="makeup_style_desc">Once you\'ve received our personalized makeup recommendations, it\'s time to bring those stunning looks to life! ✨
+    \n\nTo ensure a seamless application of the recommended foundation color, consider a few key tips. Start by testing the foundation shade on your jawline or wrist. 💅 Once you find the right shade, apply it sparingly to the center of your face and blend it outwards using a foundation brush or sponge.
+    \n\nRemember, the goal is to achieve a smooth and natural appearance that enhances your features and boosts your confidence. 💃 Embrace your inner beauty and let your radiance shine through like a sunflower in bloom. 🌻
+</string>
+
 </resources>
