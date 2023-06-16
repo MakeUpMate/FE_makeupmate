@@ -32,7 +32,7 @@ To ensure optimal performance and functionality of the MakeUpMate app, please ma
 ## Installation
 You can download MakeupMate from the link below:
 
-[MakeUpMate](https://github.com/Nugraha-akt/makeupmate/releases/download/v1.0/MakeUpMate.apk)
+[MakeUpMate](https://github.com/MakeUpMate/FE_makeupmate/releases/download/v1.0/MakeUpMate.apk)
 
 
 ## Note
